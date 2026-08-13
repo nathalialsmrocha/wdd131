@@ -1,0 +1,492 @@
+/* ===== VARIÁVEIS DE COR E DESIGN (Exigências do Projeto) ===== */
+:root {
+    --azul: #2F5D8C;       /* Títulos, cabeçalho, navegação principal */
+    --amarelo: #F2C94C;    /* Destaques, botões e detalhes */
+    --branco: #FFFFFF;     /* Cor de fundo principal */
+    --cinza: #333333;      /* Textos gerais (legibilidade) */
+    
+    /* Sombras baseadas no azul para manter harmonia */
+    --sombra-card: 0 8px 24px rgba(47, 93, 140, 0.12);
+    --borda-raio: 12px;
+    --transicao: all 0.3s ease;
+}
+
+/* ===== RESET & TIPOGRAFIA BÁSICA ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Exigência: Open Sans para textos */
+    font-family: "Open Sans", sans-serif;
+    color: var(--cinza);
+    background-color: var(--branco);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Exigência: Poppins para títulos e cabeçalhos. Azul nos títulos. */
+h1, h2, h3, .logo {
+    font-family: "Poppins", sans-serif;
+    color: var(--azul);
+}
+
+/* Exceção: o <strong> usa Poppins para dar peso dentro do texto Open Sans */
+strong {
+    font-family: "Poppins", sans-serif;
+    color: var(--azul);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ===== CABEÇALHO (Header com Azul) ===== */
+.header-principal {
+    background-color: var(--azul);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.cabecalho-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+/* Configuração do Logo (Alinhamento da Imagem e Texto) */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem; /* Espaço entre a imagem e o texto */
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.logo-img {
+    max-height: 45px; /* Limita a altura da logo para caber no menu */
+    width: auto;
+    display: block;
+}
+
+/* Menu de Navegação */
+.menu-lista {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-lista a {
+    color: var(--branco);
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transicao);
+    padding: 0.5rem 0;
+}
+
+/* Amarelo utilizado como destaque (hover e ativo) */
+.menu-lista a:hover, .menu-lista a.ativo {
+    color: var(--amarelo);
+}
+
+.menu-botao {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--branco);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ===== BANNER PRINCIPAL ===== */
+/* ===== BANNER PRINCIPAL ===== */
+.banner-img {
+    width: 100%;
+    height: 300px; /* Reduzi de 450px para 300px para ocupar menos espaço da tela */
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+}
+
+/* ===== SEÇÃO BEM-VINDO ===== */
+.bem-vindo {
+    padding: 3rem 1.5rem 2.5rem; /* Reduzi bastante o padding superior que criava o "buraco" */
+    text-align: center;
+}
+
+.bem-vindo-texto {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bem-vindo h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.bem-vindo p {
+    font-size: 1.15rem;
+}
+
+/* ===== SEÇÃO DUPLA (Mantendo fundo branco, separando com layout e sombra) ===== */
+.secao-dupla-fundo {
+    background-color: var(--branco);
+    padding: 2rem 0 6rem;
+}
+
+.layout-duplo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* Estilo de Card Profissional */
+.card {
+    background-color: var(--branco);
+    border: 1px solid #eaeaea;
+    border-radius: var(--borda-raio);
+    box-shadow: var(--sombra-card);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transicao);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(47, 93, 140, 0.2);
+}
+
+.card-cabecalho {
+    background-color: var(--azul);
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 4px solid var(--amarelo); /* Destaque amarelo */
+}
+
+.card-cabecalho h2 {
+    color: var(--branco);
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.card-corpo {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+/* Card: Tema do Ano */
+.img-tema {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.mensagem-box {
+    background-color: #fdfaf0; /* Fundo super sutil para não fugir do branco */
+    border-left: 5px solid var(--amarelo);
+    padding: 1.2rem;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: var(--cinza);
+}
+
+/* Card: Atividades */
+.lista-atividades {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.atividade-item {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.atividade-icone {
+    font-size: 1.8rem;
+    background-color: rgba(47, 93, 140, 0.1);
+    padding: 0.8rem;
+    border-radius: 50%;
+    color: var(--azul);
+}
+
+.atividade-detalhes p {
+    font-size: 0.95rem;
+    margin-top: 0.3rem;
+}
+
+/* ===== BOTÕES (Amarelo para chamadas de ação) ===== */
+.botao {
+    display: inline-block;
+    text-align: center;
+    border: none;
+    background-color: var(--amarelo);
+    color: var(--cinza); /* Contraste ideal com amarelo */
+    border-radius: 30px;
+    padding: 0.9rem 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transicao);
+    width: 100%;
+    font-size: 1rem;
+}
+
+.botao:hover {
+    background-color: #e0b83d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(242, 201, 76, 0.4);
+}
+
+/* ===== RODAPÉ ===== */
+.footer-principal {
+    background-color: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.footer-conteudo p {
+    margin-bottom: 0.5rem;
+}
+
+.link-rodape {
+    color: var(--amarelo);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transicao);
+}
+
+.link-rodape:hover {
+    color: var(--branco);
+}
+
+/* ===== RESPONSIVIDADE (Mobile Wireframe) ===== */
+@media (max-width: 768px) {
+    .cabecalho-conteudo {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0 0 0;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .menu-botao {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.1);
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav.ativo {
+        display: block;
+    }
+
+    .menu-lista {
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+    }
+
+    .menu-lista a {
+        display: block;
+        padding: 1.2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .banner-img {
+        height: 250px;
+    }
+
+    .bem-vindo {
+        padding: 4rem 1.5rem;
+    }
+
+    .bem-vindo h1 {
+        font-size: 2.2rem;
+    }
+
+    .layout-duplo {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* ===== GRID DE 3 COLUNAS (Para Atividades e Propósito) ===== */
+.grid-3-colunas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* ===== ESTILOS DO FORMULÁRIO PROFISSIONAL ===== */
+.formulario-container {
+    max-width: 700px;
+    margin: 4rem auto;
+    background-color: var(--branco);
+    padding: 3rem;
+    border-radius: var(--borda-raio);
+    box-shadow: var(--sombra-card);
+    border-top: 5px solid var(--amarelo);
+}
+
+.formulario-container h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.formulario-container > p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+}
+
+.grupo-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--azul);
+}
+
+.grupo-form input, 
+.grupo-form select, 
+.grupo-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    background-color: #fafafa;
+    transition: var(--transicao);
+}
+
+.grupo-form input:focus, 
+.grupo-form select:focus, 
+.grupo-form textarea:focus {
+    outline: none;
+    border-color: var(--azul);
+    background-color: var(--branco);
+    box-shadow: 0 0 0 3px rgba(47, 93, 140, 0.1);
+}
+
+.grupo-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ===== ESTILOS DE CAMPOS OBRIGATÓRIOS E OPCIONAIS ===== */
+.obrigatorio {
+    color: #e63946; 
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+.opcional {
+    color: #888;
+    font-weight: 400;
+    font-size: 0.85rem;
+    font-family: "Open Sans", sans-serif;
+    margin-left: 4px;
+}
+
+/* ===== ESTILOS PARA FIELDSET (Radios e Checkboxes) ===== */
+.grupo-fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #fafafa;
+    transition: var(--transicao);
+}
+
+.grupo-fieldset:hover {
+    border-color: #bbbbbb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.grupo-fieldset legend {
+    font-weight: 600;
+    color: var(--azul);
+    padding: 0 0.8rem;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--branco);
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Layout VERTICAL (Um abaixo do outro) */
+.opcoes-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    margin-top: 0.5rem;
+}
+
+.grupo-fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem; 
+    font-weight: 400;
+    color: var(--cinza);
+    cursor: pointer;
+    margin-bottom: 0;
+    padding: 0.5rem; 
+    border-radius: 6px;
+    transition: var(--transicao);
+}
+
+.grupo-fieldset label:hover {
+    background-color: rgba(47, 93, 140, 0.05); 
+}
+
+.grupo-fieldset input[type="radio"],
+.grupo-fieldset input[type="checkbox"] {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin: 0;
+    accent-color: var(--azul);
+    cursor: pointer;
+}
+
+.botao-enviar {
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
