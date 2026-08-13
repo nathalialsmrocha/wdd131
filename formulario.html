@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Produto</title>
+    <link rel="stylesheet" href="estilos/formulario.css">
+    <script src="scripts/formulario.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Avaliação de Produto</h1>
+    </header>
+
+    <main>
+        <form method="get" action="avaliacao.html">
+
+            <label for="produto">Nome do Produto:</label>
+            <select id="produto" name="produto" required>
+                <option value="" disabled selected>Selecione um Produto...</option>
+            </select>
+           <fieldset>
+    <legend>Classificação Geral</legend>
+
+    <label for="classificacao1">
+        <input type="radio" id="classificacao1" name="classificacao" value="1" required>
+        ☆
+    </label>
+
+    <label for="classificacao2">
+        <input type="radio" id="classificacao2" name="classificacao" value="2" required>
+        ☆☆
+    </label>
+
+    <label for="classificacao3">
+        <input type="radio" id="classificacao3" name="classificacao" value="3" required>
+        ☆☆☆
+    </label>
+
+    <label for="classificacao4">
+        <input type="radio" id="classificacao4" name="classificacao" value="4" required>
+        ☆☆☆☆
+    </label>
+
+    <label for="classificacao5">
+        <input type="radio" id="classificacao5" name="classificacao" value="5" required>
+        ☆☆☆☆☆
+    </label>
+</fieldset>
+            <label for="avaliacao">Avaliação Escrita:</label>
+<textarea id="avaliacao" name="avaliacao" rows="5" cols="40"
+    placeholder="Escreva sua avaliação sobre o produto..."></textarea>
+
+            <label for="dataInstalacao">Data de Instalação:</label>
+            <input type="date" id="dataInstalacao" name="dataInstalacao" required>
+            <fieldset>
+    <legend>Recursos Úteis</legend>
+
+    <label for="nomeUsuario">Nome de Usuário:</label>
+    <input type="text" id="nomeUsuario" name="nomeUsuario">
+    <input type="submit" value="Enviar Avaliação">
+
+    <label for="facilInstalacao">
+        <input type="checkbox" id="facilInstalacao" name="recursos" value="fácil instalação">
+        Fácil instalação
+    </label>
+
+    <label for="manual">
+        <input type="checkbox" id="manual" name="recursos" value="manual">
+        Manual de instruções
+    </label>
+
+    <label for="suporte">
+        <input type="checkbox" id="suporte" name="recursos" value="suporte">
+        Suporte técnico
+    </label>
+
+    <label for="garantia">
+        <input type="checkbox" id="garantia" name="recursos" value="garantia">
+        Garantia
+    </label>
+</fieldset>
+        </form>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 - Avaliação de Produto</p>
+    </footer>
+
+</body>
+
+</html>
