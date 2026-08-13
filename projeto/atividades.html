@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Atividades da Primária em Família para ajudar crianças e famílias a aprenderem princípios do evangelho de maneira simples e divertida.">
+    <meta name="author" content="Nathália L. S. Monte Rocha">
+    <title>Atividades | Primária em Família</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/primaria.css">
+    <script src="scripts/primaria.js" defer></script>
+</head>
+<body>
+
+    <header class="header-principal">
+        <div class="container cabecalho-conteudo">
+            <a href="index.html" class="logo">
+    <img src="imagens/logo.png" alt="Logotipo Primária em Família" class="logo-img">
+    Primária em Família
+</a>
+            <button class="menu-botao" type="button" aria-label="Abrir menu">☰ Menu</button>
+            <nav>
+                <ul class="menu-lista">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="proposito.html">Sobre</a></li>
+                    <li><a href="atividades.html" class="ativo">Atividades</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="bem-vindo container">
+            <div class="bem-vindo-texto">
+                <h1>Atividades da Primária</h1>
+                <p>As atividades podem ajudar as crianças a aprenderem sobre Jesus Cristo e fortalecerem sua fé de maneira simples, alegre e significativa.</p>
+            </div>
+        </section>
+
+        <section class="secao-dupla-fundo">
+            <div class="container">
+                <div class="grid-3-colunas">
+                    <article class="card">
+                        <div class="card-cabecalho">
+                            <h2>📖 História</h2>
+                        </div>
+                        <div class="card-corpo">
+                            <p>Escolha uma história das escrituras e converse com as crianças sobre o que elas aprenderam.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-cabecalho">
+                            <h2>🎵 Música</h2>
+                        </div>
+                        <div class="card-corpo">
+                            <p>Cante um hino ou uma música da Primária e converse sobre a mensagem ensinada na música.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-cabecalho">
+                            <h2>👨‍👩‍👧‍👦 Em Família</h2>
+                        </div>
+                        <div class="card-corpo">
+                            <p>Escolha um princípio do evangelho e faça uma atividade simples que permita que toda a família participe.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção do Formulário -->
+        <section class="container">
+            <div class="formulario-container">
+                <h2>Compartilhe uma sugestão</h2>
+                <p>Você pode enviar uma ideia de atividade para realizar com sua família.</p>
+                
+                <form method="get" action="avaliacao.html">
+                    
+                    <!-- Nome -->
+                    <div class="grupo-form">
+                        <label for="nome">Seu Nome: <span class="obrigatorio">*</span></label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <!-- Tipo de Atividade (Select) -->
+                    <div class="grupo-form">
+                        <label for="atividade">Tema Principal da Atividade: <span class="obrigatorio">*</span></label>
+                        <select id="atividade" name="atividade" required>
+                            <option value="" disabled selected>Escolha um tema...</option>
+                            <option value="historia">História das escrituras</option>
+                            <option value="musica">Música ou Hino</option>
+                            <option value="familia">Noite Familiar</option>
+                        </select>
+                    </div>
+
+                    <!-- Data Sugerida (Date) -->
+                    <div class="grupo-form">
+                        <label for="dataAtividade">Data Sugerida para Realização: <span class="obrigatorio">*</span></label>
+                        <input type="date" id="dataAtividade" name="dataAtividade" required>
+                    </div>
+
+                    <!-- Faixa Etária (Radio Buttons agrupados em Fieldset - Layout Vertical) -->
+                    <fieldset class="grupo-fieldset">
+                        <legend>Faixa Etária Recomendada <span class="obrigatorio">*</span></legend>
+                        <div class="opcoes-vertical">
+                            <label for="idade1">
+                                <input type="radio" id="idade1" name="idade" value="0-3" required> 0 a 3 anos (Berçário)
+                            </label>
+                            <label for="idade2">
+                                <input type="radio" id="idade2" name="idade" value="4-7"> 4 a 7 anos (Raios de Sol/CTR)
+                            </label>
+                            <label for="idade3">
+                                <input type="radio" id="idade3" name="idade" value="8-11"> 8 a 11 anos (Valorosos)
+                            </label>
+                            <label for="idade4">
+                                <input type="radio" id="idade4" name="idade" value="todas"> Todas as idades
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Recursos Necessários (Checkboxes agrupados em Fieldset - Opcional) -->
+                    <fieldset class="grupo-fieldset">
+                        <legend>Recursos Necessários <span class="opcional">(Opcional)</span></legend>
+                        <div class="opcoes-vertical">
+                            <label for="rec1">
+                                <input type="checkbox" id="rec1" name="recursos" value="escrituras"> Livros Canônicos / Escrituras
+                            </label>
+                            <label for="rec2">
+                                <input type="checkbox" id="rec2" name="recursos" value="hinario"> Hinário / Livro de Músicas
+                            </label>
+                            <label for="rec3">
+                                <input type="checkbox" id="rec3" name="recursos" value="gravuras"> Gravuras ou Vídeos
+                            </label>
+                            <label for="rec4">
+                                <input type="checkbox" id="rec4" name="recursos" value="colorir"> Páginas para colorir / Atividades ilustradas
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Descrição da Atividade (Textarea) -->
+                    <div class="grupo-form">
+                        <label for="sugestao">Descrição da Atividade: <span class="obrigatorio">*</span></label>
+                        <textarea id="sugestao" name="sugestao" placeholder="Descreva o passo a passo de como a família pode realizar esta atividade..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="botao botao-enviar">Enviar Sugestão</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-principal">
+        <div class="container footer-conteudo">
+            <p>&copy; <span id="ano-atual"></span> - Primária em Família</p>
+            <p><a href="referencias.html" class="link-rodape">Referências do Projeto</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

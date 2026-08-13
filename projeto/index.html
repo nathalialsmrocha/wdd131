@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Primária em Família: recursos, atividades e informações para ajudar pais, líderes e crianças a aprender o evangelho em família.">
+    <meta name="author" content="Nathália L. S. Monte Rocha">
+    <title>Primária em Família | Início</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/primaria.css">
+    <script src="scripts/primaria.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO COM A LOGO -->
+    <header class="header-principal">
+        <div class="container cabecalho-conteudo">
+            <a href="index.html" class="logo">
+                <img src="imagens/logo.png" alt="Logotipo Primária em Família" class="logo-img">
+                Primária em Família
+            </a>
+
+            <button class="menu-botao" type="button" aria-label="Abrir menu">
+                ☰ Menu
+            </button>
+
+            <nav>
+                <ul class="menu-lista">
+                    <li><a href="index.html" class="ativo">Início</a></li>
+                    <li><a href="proposito.html">Sobre</a></li>
+                    <li><a href="atividades.html">Atividades</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- BEM-VINDO (Sem o banner para eliminar o espaço em branco) -->
+        <section class="bem-vindo container">
+            <div class="bem-vindo-texto">
+                <h1>Bem-vindo ao <br><span class="nome-destaque">Primária em Família</span></h1>
+                <p>
+                    Um espaço criado para ajudar crianças, pais e líderes a aprender, 
+                    ensinar e fortalecer o evangelho juntos no lar. A Primária ajuda 
+                    as crianças a desenvolverem fé e a fortalecerem seu relacionamento 
+                    com o Pai Celestial.
+                </p>
+            </div>
+        </section>
+
+        <!-- LAYOUT DUPLO COM CARDS -->
+        <section class="secao-dupla-fundo">
+            <!-- (Mantenha o resto do seu código igual daqui para baixo) -->
+
+        <!-- LAYOUT DUPLO COM CARDS -->
+        <section class="secao-dupla-fundo">
+            <div class="container layout-duplo">
+                
+                <!-- TEMA DO ANO (Card Esquerdo) -->
+                <article class="card">
+                    <div class="card-cabecalho">
+                        <h2>Tema do Ano</h2>
+                    </div>
+                    <div class="card-corpo">
+                        <img src="imagens/tema.jpg" alt="Ilustração do tema da Primária deste ano" loading="lazy" class="img-tema">
+                        
+                        <div class="mensagem-box">
+                            <p id="mensagem-familia">
+                                Pequenos momentos de aprendizado podem fazer uma grande
+                                diferença na vida das crianças.
+                            </p>
+                        </div>
+                        
+                        <button id="mensagem-botao" class="botao" type="button">
+                            Mostrar Nova Mensagem
+                        </button>
+                    </div>
+                </article>
+
+                <!-- PRÓXIMAS ATIVIDADES & EVENTOS (Card Direito) -->
+                <article class="card">
+                    <div class="card-cabecalho">
+                        <h2>Próximas Atividades</h2>
+                    </div>
+                    <div class="card-corpo">
+                        <ul class="lista-atividades">
+                            <li class="atividade-item">
+                                <div class="atividade-icone">📖</div>
+                                <div class="atividade-detalhes">
+                                    <strong>Momento de História</strong>
+                                    <p>Escolha uma história das escrituras e converse com as crianças.</p>
+                                </div>
+                            </li>
+                            <li class="atividade-item">
+                                <div class="atividade-icone">🎵</div>
+                                <div class="atividade-detalhes">
+                                    <strong>Aprender com Música</strong>
+                                    <p>Cante um hino ou uma música da Primária em família.</p>
+                                </div>
+                            </li>
+                            <li class="atividade-item">
+                                <div class="atividade-icone">📅</div>
+                                <div class="atividade-detalhes">
+                                    <strong>Calendário de Eventos</strong>
+                                    <p>Acompanhe as datas das próximas apresentações e atividades na capela.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <a href="atividades.html" class="botao">Ver Todas as Atividades</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer-principal">
+        <div class="container footer-conteudo">
+            <p>&copy; <span id="ano-atual"></span> - Primária em Família</p>
+            <p><a href="referencias.html" class="link-rodape">Referências do Projeto</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
